@@ -1,6 +1,8 @@
 package till.edu.appcong;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +16,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        // Gắn layout tương thích với file này
         setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+        // Đây là bộ lắng nghe và xử lý sự kiện click lên nút Tính Tổng
+    public void XuLyCong(View view){
+        // Tìm , tham chiếu đến điều khiển trên tệp XML, mapping sang java file
+        EditText editTextSoA = findViewById(R.id.editA);
+        EditText editTextSoB = findViewById(R.id.editB);
+        EditText editTextSoKQ = findViewById(R.id.editKQ);
+        // Lấy dữ liệu về ở điều khiển só a
+        String strA = editTextSoA.getText().toString();
+        // Lấy dữ liệu về ở điều khiển só b
+        String strB = editTextSoB.getText().toString();
+
+        // Chuyển dữ liệu về dạng số
+        int so_A = Integer.parseInt(strA);
+        int so_B = Integer.parseInt(strB);
+
+        // Tính toán theo yêu cầu
+        int tong = so_A + so_B;
+        String strTong = String.valueOf(tong); // Chuyển sang dạng chuỗi
+        // Hiển thị kết quả ra màn hình
+        editTextSoKQ.setText(strTong);
+
     }
 }
