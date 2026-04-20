@@ -6,11 +6,11 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imgAvatar"
         android:layout_width="135dp"
         android:layout_height="150dp"
         android:layout_marginStart="88dp"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/tvMSSV"
         tools:layout_editor_absoluteY="83dp"
         tools:srcCompat="@tools:sample/avatars" />
 
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tvMSSV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -35,22 +35,22 @@
         app:layout_constraintTop_toBottomOf="@+id/tvHoTen" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tvLop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
         android:text="Lớp: 65.CNTT-2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMSSV" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tvDiaChi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="Nha Trang - Khánh Hòa"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLop" />
 </androidx.constraintlayout.widget.ConstraintLayout>
